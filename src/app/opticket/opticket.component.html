@@ -1,0 +1,58 @@
+<div class="bg-dark text-light" style="height: 100vh;">
+    <label style="font-family: 'Raleway', sans-serif;text-align: center;width: 100vw;" class="mt-4 mb-1"><h1>Doctor <span class="text-success">Appointment</span></h1></label><hr>
+    <div class="d-flex position-relative container my-5 row">
+        <div class="col-lg-8 col-md-8" style="display: flex;flex-wrap: wrap;justify-content: center;">
+            <img src={{dr_profileData.dr_image}} class="flex-shrink-0 me-3" alt="..." style="width:200px;height:200px;border:3px solid rgb(42, 151, 84);border-radius: 50%;">
+            <div>
+                <h5 class="mt-0 text-center">{{dr_profileData.dr_name}}</h5>
+                <h5 class="mt-1 text-center">{{dr_profileData.degree}}</h5>
+                <h6 class="mt-5">Fees: INR 700<br>
+                    (Prices are indicative and may vary based on the location) </h6>
+                    <button class="btn btn-outline-success align-items-center" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Book slot</button>
+                    <a class="btn btn-outline-success align-items-center mx-2" href="home" type="button" >Home</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 my-5" style="display: flex;flex-wrap: wrap;gap:3rem;justify-content: center;">
+          <div style="width: 8rem;height: 6rem;background-color: #ffffff1e;">
+                <h4>Morning</h4><hr>
+                <h5>{{dr_profileData.consulting_time[0].morningtime.mfrom}}-{{dr_profileData.consulting_time[0].morningtime.mto}}</h5>
+          </div>
+          <div style="width: 8rem;height: 6rem;background-color: #ffffff1e;">
+            <h4>Evening</h4><hr>
+            <h5>{{dr_profileData.consulting_time[0].eveningtime.afrom}}-{{dr_profileData.consulting_time[0].eveningtime.ato}}</h5>
+          </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-success">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body bg-dark">
+            <div class="col-lg-4 col-md-4 my-2 text-light" style="display: flex;gap:3rem;margin: 0rem 5rem;">
+               <form [formGroup]="opbookingform" class="gap-1">
+                    <label for="patiencenameid">Patience Name</label>
+                    <input formControlName="pname" id="patiencenameid" name="patience" type="text" placeholder="patience Name">
+                    <label  for="patienceage">Patience age</label>
+                    <input formControlName="page" id="patienceage" name="patience" type="number" placeholder="patience age">
+                    <label>Gender</label><br>
+                    <input formControlName="pgender" type="radio" name="gender" id="male" value="male">
+                    <label>Male</label>
+                    <input formControlName="pgender" type="radio" name="gender" id="female" value="female">
+                    <label>Female</label>
+                    <input formControlName="pdate" class="my-2" type="date"><br>
+                    <input formControlName="schedule" type="radio" name="moev" id="morningid" value="Morning"/>
+                    <label for="morningid">Morning</label>
+                    <input formControlName="schedule" type="radio" name="moev" id="EveningId" value="Evening"/>
+                    <label>Evening</label>
+                    <button class="btn btn-success" (click)="payMentbookop()">Pay New</button>
+               </form>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+  

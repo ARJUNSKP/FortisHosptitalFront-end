@@ -1,0 +1,40 @@
+.loginbody{
+    height: 100vh;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    box-shadow: 10px 10px 10px 10px rgba(87, 87, 87, 0.467);
+    transition: 1s ease-in-out;
+}
+form:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+input{
+    border-radius: 2rem;
+}
+button:hover{
+    border: 1px solid black;
+}
+.found{
+    font-size: 15px;
+}
+@media screen and (min-width:768px){
+    .formtable{
+        width: 18rem;
+    }
+}
+@media screen and (min-width:576px){
+    .formtable{
+        width: 18rem;
+    }
+}
+@media screen and (max-width:576px){
+    .formtable{
+        width: 16rem;
+    }
+}

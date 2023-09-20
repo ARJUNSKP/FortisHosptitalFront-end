@@ -1,0 +1,58 @@
+<app-header></app-header>
+<div class="doctorycatogory bg-dark">
+    <div class="departmentdata container-fluid pt-5 pb-1">
+        <div class="mx-5">
+            <div class="dropdown">
+                <button class="dropbtn" value="Anesthesiology" (mouseover)="department1($event)" > Anesthesiology Department </button>
+                <div class="dropdown-content" *ngFor="let i of drlist">
+                    <a *ngIf="adminLogin" href="doctorProfile/{{i.dr_name}}">{{i.dr_name}}</a>
+                    <a *ngIf="userlogin" href="doctorviewuser/{{i.dr_name}}">{{i.dr_name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-1">
+        <div class="mx-5">
+            <div class="dropdown">
+                <button class="dropbtn" value="Cardiology" (mouseover)="department1($event)" > Cardiology Department</button>
+                <div class="dropdown-content" *ngFor="let i of drlist">
+                    <a *ngIf="adminLogin" href="doctorProfile/{{i.dr_name}}">{{i.dr_name}}</a>
+                    <a *ngIf="userlogin" href="doctorviewuser/{{i.dr_name}}">{{i.dr_name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-1">
+        <div class="mx-5">
+            <div class="dropdown">
+                <button class="dropbtn" value="Gastroenterology" (mouseover)="department1($event)"> Gastroenterology Department </button>
+                <div class="dropdown-content" *ngFor="let i of drlist">
+                    <a *ngIf="adminLogin" href="doctorProfile/{{i.dr_name}}">{{i.dr_name}}</a>
+                    <a *ngIf="userlogin" href="doctorviewuser/{{i.dr_name}}">{{i.dr_name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-1">
+        <div class="mx-5">
+            <div class="dropdown">
+                <button class="dropbtn" value="Surgical Oncology" (mouseover)="department1($event)" > Surgical Oncology Department </button>
+                <div class="dropdown-content" *ngFor="let i of drlist">
+                    <a *ngIf="adminLogin" href="doctorProfile/{{i.dr_name}}">{{i.dr_name}}</a>
+                    <a *ngIf="userlogin" href="doctorviewuser/{{i.dr_name}}">{{i.dr_name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-1">
+        <div class="mx-5">
+            <div class="dropdown">
+                <button class="dropbtn" value="Dermatology" (mouseover)="department1($event)" > Dermatology Department </button>
+                <div class="dropdown-content" *ngFor="let i of drlist">
+                    <a *ngIf="adminLogin" href="doctorProfile/{{i.dr_name}}">{{i.dr_name}}</a>
+                    <a *ngIf="userlogin" href="doctorviewuser/{{i.dr_name}}">{{i.dr_name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

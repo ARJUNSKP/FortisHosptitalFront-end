@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-3">
+        <a class="navbar-brand" href="index.html"><b>Fortis <span class="text-success">Hospital</span></b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                <li *ngIf="doctorLogin" class="nav-item"><a class="nav-link" href="appointment">Appointment</a></li>
+                <li *ngIf="doctorrealated" class="nav-item"><a class="nav-link" href="doctor">Book An Appointment</a></li>
+                <li *ngIf="doctorLogin" class="nav-item"><button class="nav-link btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</button></li>
+                <li *ngIf="userLogin" class="nav-item"><a class="nav-link" href="contactus">Contact Us</a></li>
+                <li *ngIf="adddoctor" class="nav-item"><a class="nav-link" href="newdoctor">Add Doctor</a></li>
+                <li class="nav-item"><button class="btn btn-outline-success nav-link" (click)="logout()">logout</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"><span class="text-success">Dr</span> Profile</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div style="display: flex;" class="mb-2">
+            <img src={{drProfile.dr_image}} alt="..." width="100px" height="100px" class="me-4" style="border-radius: 50%;border: 2px solid #449c5a;"/>
+            <div>
+                <h5>{{drProfile.dr_name}}</h5>
+                <h6>{{drProfile.degree}}</h6>
+            </div>
+        </div>
+        <form [formGroup]="doctorProfileform" style="display: flex;flex-direction: column;">
+            <div class="my-2">
+                <h5>Morning Consulting Time</h5>
+                <input formControlName="mfrom" class="my-1" id="formid" name="form" placeholder="From">
+                <input formControlName="mto" id="toid" name="to" placeholder="To">
+            </div>
+            <div>
+                <h5>Afternoon Consulting Time</h5>
+                <input formControlName="afrom" class="my-1" id="formid" name="form" placeholder="From">
+                <input formControlName="ato" id="toid" name="to" placeholder="To">
+            </div>
+            <button class="btn btn-outline-success my-3" type="button" (click)="setTime()">Set Time slot</button>
+        </form>
+    </div>
+</div>

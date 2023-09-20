@@ -1,0 +1,12 @@
+.buttongroup{
+    display: flex;
+    flex-wrap: wrap;
+}
+input{
+    border: none;
+    
+}
+textarea{
+    border:none;
+    height: 20rem;
+}

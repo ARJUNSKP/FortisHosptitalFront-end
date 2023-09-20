@@ -1,0 +1,71 @@
+.adddoctormain{ 
+    height: 100vh;
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 20rem;
+    border-radius: 5rem;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #00000052;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 20rem;
+    border-radius: 1rem;
+    position: relative;
+    top:-3rem;
+    left: 20rem;
+  }
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .doctorycatogory{
+    padding: 3rem 1rem;
+    height: 100vh;
+  }
+  
+  .dropdown-content a:hover {background-color: #838080bb;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  @media screen and (max-width:716px) {
+    .dropdown-content{
+        width: 17rem;
+        left: 18rem;
+    }
+    .dropbtn{
+        width: 18rem;
+    }
+  }
+  @media screen and (max-width:639px) {
+    .dropdown-content{
+        left: 15rem;
+    }
+    .dropbtn{
+        width: 15rem;
+    }
+  }
+  @media screen and (max-width:586px){
+    .dropdown-content{
+        top:5px;
+        left: 0px;
+    }
+  }

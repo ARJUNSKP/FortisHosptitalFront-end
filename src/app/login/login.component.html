@@ -1,0 +1,28 @@
+<div class="loginbody row">
+    
+    <div class="col-lg-6 col-md-6 bg-gradient py-5 align-items-center" style="display: flex;">
+        <div class="container text-center">
+            <h1><b>Fortis<span class="text-success">Hospital</span></b></h1>
+            <p>"Innovating Healthcare for a Brighter Tomorrow"</p>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 py-5 bg-dark px-0">
+        <div class="loginform">
+            <form [formGroup]="loginformvalidater" class="formtable container py-5 gap-3 bg-success align-items-center">
+                <h2 class="text-center">Log in</h2>
+                <input formControlName="email" type="email" placeholder="Email" class="mt-2 w-75">
+                <label *ngIf="loginformvalidater.get('email')?.errors && loginformvalidater.get('email')?.touched" class="text-center text-danger"> email id not in the correct format</label>
+                <input formControlName="psw" type="password" placeholder="password" class="w-75">
+                <label *ngIf="loginformvalidater.get('psw')?.errors && loginformvalidater.get('psw')?.touched" class="text-center text-danger">Numbers and letters SpacialCarater only</label>
+                <select formControlName="selectiondata" name="carater " id="cars" class="w-75">
+                    <option value="user">User</option>
+                    <option value="doctor">Doctor</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <label class="found text-center w-75">Do not have an account? <a style="text-decoration: none;color:aliceblue" href="signIn">sign up</a></label> 
+                <button (click)="login()" type="submit" class="btn btn-warning my-3 w-75">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+

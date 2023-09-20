@@ -1,0 +1,30 @@
+<app-header></app-header>
+<section class="newdoctor bg-dark text-light py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <form [formGroup]="newDoctorForm">
+            <div class="row gx-4 gx-lg-5 align-items-center py-5">
+                <div class="col-md-6" style="display: flex;flex-direction: column;align-items: center;gap:5px">
+                    <img class="card-img-top mb-5 mb-md-0" src="https://i.postimg.cc/qRL5SDJ3/pngwing-com-10.png" alt="..." />
+                    <input formControlName="image" type="text" placeholder="Url of image" class="w-75 mb-3"/>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder"><input type="text"formControlName="drname" id="drnameid" name="drname" placeholder="Doctor Name" class="w-100"></h1>
+                    <div class="fs-5 mb-5">
+                        <span> Consultant - <input type="text" formControlName="department" id="departmentid" name="department" placeholder="Department"><br>
+                            <input type="text" id="educationid" formControlName="Education" name="educationid" placeholder="Education">
+                        </span>
+                    </div>
+                    <p class="lead"><textarea formControlName="description" class="w-100" type="text" placeholder="short description about doctor" id="descriptionid" name="description"></textarea></p>
+                    <label class="me-3"><input formControlName="email" id="emailid" name="email" type="text" placeholder="Emaill-id"/></label>
+                    <label><input formControlName="password" type="password" id="passwordid" name="password" placeholder="password"/></label>
+                    <div class="buttongroup">
+                        <button class="btn btn-outline-success flex-shrink-0 my-2" type="submit" (click)="RegisterDocter()">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add Doctor <i class="fa-solid fa-arrow-right-long" style="color: #1d8f3f;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

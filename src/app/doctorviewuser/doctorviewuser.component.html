@@ -1,0 +1,24 @@
+<app-header></app-header>
+<section class="bg-dark text-light py-5">
+    <div class="container py-5 px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src={{dr_profileData.dr_image}} alt="..." width="200px" height="400px"style="border-radious:1rem" /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder" >{{dr_profileData.dr_name}}</h1>
+                <div class="fs-5 mb-5">
+                    <span>
+                        {{dr_profileData.department}}<br>
+                        {{dr_profileData.degree}}
+                    </span>
+                </div>
+                <p class="lead">{{dr_profileData.description}}</p>
+                <div class="buttongroup d-flex gap-2 py-5">
+                    <button class="btn btn-outline-success flex-shrink-0" type="button" (click)="opbooking()" >
+                        <i class="bi-cart-fill me-1"></i>
+                        Book An Appointment <i class="fa-solid fa-arrow-right-long" style="color: #1d8f3f;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

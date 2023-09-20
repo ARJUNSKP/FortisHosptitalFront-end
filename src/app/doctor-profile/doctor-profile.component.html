@@ -1,0 +1,28 @@
+<app-header></app-header>
+<section class="bg-dark text-light py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src={{dr_profileData.dr_image}} alt="..." width="200px" height="400px"style="border-radious:1rem" /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder" ><input class="bg-dark text-light" type=text [(ngModel)]="dr_profileData.dr_name" /></h1>
+                <div class="fs-5 mb-5">
+                    <span>
+                        <input class="bg-dark text-light" type=text [(ngModel)]="dr_profileData.department"/><br>
+                        <input class="bg-dark text-light" type=text [(ngModel)]="dr_profileData.degree"/>
+                        </span>
+                </div>
+                <p class="lead"><textarea class="w-100 bg-dark text-light" [(ngModel)]="dr_profileData.description"></textarea></p>
+                <div class="buttongroup d-flex gap-2">
+                    <button class="btn btn-outline-success flex-shrink-0" type="button" (click)="updateData()">
+                        <i class="bi-cart-fill me-1"></i>
+                        Update Profile <i class="fa-solid fa-arrow-right-long" style="color: #1d8f3f;"></i>
+                    </button>
+                    <button class="btn btn-outline-success flex-shrink-0" type="button" (click)="deletprofile()">
+                        <i class="bi-cart-fill me-1"></i>
+                        Delete DoctorProfile <i class="fa-solid fa-arrow-right-long" style="color: #1d8f3f;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
