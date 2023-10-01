@@ -7,16 +7,17 @@ export class DatesotePipe implements PipeTransform {
 
   transform(AllAppointment:any[],searchcondent:string,searchfeld:string): any {
     const result:any=[]
-    if(!AllAppointment || !searchcondent ||!searchfeld){
+    if(!AllAppointment || !searchcondent || !searchfeld){
       return AllAppointment
     }
     else{
       AllAppointment.forEach(item=>{
-        if(item[searchfeld].includes(searchcondent)){
+        if(item[searchfeld].includes(searchcondent.trim())){
           result.push(item)
         }
       })
+      return result
+
     }
-    return result
   }
 }

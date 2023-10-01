@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../servise/data.service';
 import { FormBuilder } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-appointment',
@@ -15,11 +16,11 @@ export class AppointmentComponent implements OnInit{
   searchProduct:any=[]
   // status:boolean=false
   searchterm:any
-  searchday:any
+  searchday:any=""
   date:any
   
   // notappointment:any
-  constructor(private ds:DataService,private fb:FormBuilder,private datePipe:DatePipe){}
+  constructor(private ds:DataService,private fb:FormBuilder,private datePipe:DatePipe,private route:Router){}
 
   ngOnInit(): void {
       this.date=new Date()
@@ -44,8 +45,10 @@ export class AppointmentComponent implements OnInit{
   }
 
   searchDate(event:any){
-    this.searchday=event.target.value
-    this.searchday = this.datePipe.transform(event.target.value, 'yyyy/MM/dd');
+     var day=event.target.value
+    this.searchday = this.datePipe.transform(day, 'yyyy/MM/dd');
     console.log(this.searchday);
+    console.log(typeof(this.searchday));
+    
   }
 }

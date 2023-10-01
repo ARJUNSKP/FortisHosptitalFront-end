@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { DataService } from '../servise/data.service';
 
 @Component({
   selector: 'app-contacts',
@@ -8,22 +10,32 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ContactsComponent {
 
-  constructor(private fb:FormBuilder){}
+  constructor(private fb:FormBuilder,private router:Router,private ds:DataService){}
 
   contactUsFrom=this.fb.group({
     email:['',Validators.required],
     phoneNumber:[''],
-    Seduction:['',Validators.required]
+    seduction:['',Validators.required]
   })
-  send(){
+  sends(){
     if(this.contactUsFrom.valid){
       var path=this.contactUsFrom.value
       var email=path.email
       var phoneNumber=path.phoneNumber
-      var seduction=path.Seduction
+      var seduction=path.seduction
 
-      console.log(email,phoneNumber,seduction);
-      
+      this.ds.contacts(email,phoneNumber,seduction).subscribe((Responce:any)=>{
+        if(Responce){
+          this.router.navigateByUrl('home')
+        }
+      },
+      Responce=>{
+        alert("not Registered")
+      })
+
+    }
+    else{
+      alert("validation error")
     }
   }
 

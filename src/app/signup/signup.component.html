@@ -11,17 +11,17 @@
             <form [formGroup]="signpform" class="formtable container py-5 gap-3 bg-success align-items-center">
                 <h2 class="text-center">Sign In</h2>
                 <input formControlName="uname" type="text" placeholder="UserName" class="mt-2 w-75">
-                <label *ngIf="signpform.get('uname')?.errors && signpform.get('uname')?.touched" class="text-center text-danger"> email id not in the correct format</label>
+                <label *ngIf="signpform.get('uname')?.errors && signpform.get('uname')?.touched" class="text-center text-danger">not used specialcharacter</label>
                 <input formControlName="email" type="email" placeholder="Email" class="mt-2 w-75">
-                <label *ngIf="signpform.get('email')?.errors && signpform.get('email')?.touched" class="text-center text-danger"> email id not in the correct format</label>
+                <label *ngIf="signpform.get('email')?.errors && signpform.get('email')?.touched" class="text-center text-danger"> email id not correct format</label>
                 <input formControlName="age" type="text" placeholder="age" class="mt-2 w-75">
-                <label *ngIf="signpform.get('age')?.errors && signpform.get('age')?.touched" class="text-center text-danger"> email id not in the correct format</label>
+                <label *ngIf="signpform.get('age')?.errors && signpform.get('age')?.touched" class="text-center text-danger"> numbers Only </label>
                 <select formControlName="gender" name="carater " id="cars" class="w-75">
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
                 <input formControlName="psw" type="password" placeholder="password" class="w-75">
-                <label *ngIf="signpform.get('psw')?.errors && signpform.get('psw')?.touched" class="text-center text-danger">Numbers and letters SpacialCarater only</label>
+                <label *ngIf="signpform.get('psw')?.errors && signpform.get('psw')?.touched" class="text-center text-danger">Numbers and letters specialcharacter only</label>
                 <input formControlName="cpsw" type="password" placeholder="password" class="w-75">
                 <label *ngIf="signpform.get('cpsw')?.errors && signpform.get('cpsw')?.touched" class="text-center text-danger">Numbers and letters SpacialCarater only</label>
                 <button (click)="registration()" type="submit" class="btn btn-warning my-3 w-75">Login</button>

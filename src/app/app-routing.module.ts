@@ -10,6 +10,7 @@ import { OpticketComponent } from './opticket/opticket.component';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { SignupComponent } from './signup/signup.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { EnquiryComponent } from './enquiry/enquiry.component';
 
 
 const routes: Routes = [
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'opticketbooking/:dr_name',component:OpticketComponent},
   { path: 'appointment',component:AppointmentComponent},
   { path: 'signIn',component:SignupComponent},
-  { path: 'contactus',component:ContactsComponent}
+  { path: 'contactus',component:ContactsComponent},
+  { path: 'enquiry',component:EnquiryComponent}
 ];
 
 @NgModule({

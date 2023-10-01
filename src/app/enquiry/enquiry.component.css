@@ -1,0 +1,19 @@
+#searchbox input{
+    width: 50%;
+}
+@media screen and (max-width:500px){
+    #searchbox input{
+        width:75%;
+    }
+}
+@media screen and (max-width:992px){
+   #header{
+    display: none;
+   }
+}
+/* #singlebar{
+    transition: 1s ease-in-out;
+}
+#singlebar:hover{
+    transform: scale(1.1);
+} */

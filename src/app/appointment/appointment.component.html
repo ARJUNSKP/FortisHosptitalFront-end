@@ -1,12 +1,12 @@
 <app-header></app-header>
 <div class="bg-dark" style="height: 100vh;">
-    <form id="searchbox" style="display: flex;justify-content: center;align-items:center" class="pt-5 pb-2">
+    <form id="searchbox" style="display: flex;justify-content: center;align-items:center" class="pt-5 pb-2 ">
         <input class="align-items-center" (keyup)="search($event)" style="padding: 10px 1rem;border-radius: 5rem;" type="text" placeholder="  Search Appointment">
         <i class="fa-solid fa-magnifying-glass fa-bounce fa-2xl" style="position: relative;left: -3.5rem;"></i>
     </form>
-    <form  class="container my-5">
+    <!-- <form  class="container my-5">
         <input (change)="searchDate($event)" id="dateid" name="datename" type="date" placeholder="date" style="border-radius: 2rem;">
-    </form>
+    </form> -->
     <!-- <div *ngIf="status" class="container">
         <div class="row text-light bg-success" style="height:3rem;border-radius: 10px;">
             <div class="col-lg-4 col-md-4  my-2"></div>
@@ -14,7 +14,7 @@
             <div class="col-lg-4 col-md-4  my-2"></div>
         </div>
     </div> -->
-    <div id="header" class="container">
+    <div id="header" class="container mt-5">
         <div class="row text-light text-center bg-success" style="height:4rem;border-radius: 10px;">
             <div class="col-lg-3 col-md-3 col-sm-3  text-dark my-3"><b>PatientName</b></div>
             <div class="col-lg-3 col-md-3 col-sm-3 text-dark my-3"><b>Age</b></div>
@@ -22,7 +22,7 @@
             <div class="col-lg-3 col-md-4 col-sm-3 text-dark my-3"><B>Appointment Schedule</B></div>
         </div>
     </div>
-    <div class="container" *ngFor="let i of searchProduct | search: searchterm :'pname' | datesote: searchday : 'pdate'">
+    <div class="container" *ngFor="let i of AllAppointment | search: searchterm :'pname' | datesote: '' : 'pdate'">
         <div id="singlebar" class="row text-light text-center bg-success my-3" style="border-radius: 10px;">
             <div class="col-lg-3 col-md-3 col-sm-3  my-2">{{i.pname}}</div>
             <div class="col-lg-3 col-md-3 col-sm-3 my-2">{{i.page}}</div>

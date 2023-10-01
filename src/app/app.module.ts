@@ -19,6 +19,7 @@ import { DatePipe } from '@angular/common';
 import { DatesotePipe } from './pipe/datesote.pipe';
 import { SignupComponent } from './signup/signup.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { EnquiryComponent } from './enquiry/enquiry.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     DatesotePipe,
     SignupComponent,
     ContactsComponent,
+    EnquiryComponent,
   ],
   imports: [
     BrowserModule,

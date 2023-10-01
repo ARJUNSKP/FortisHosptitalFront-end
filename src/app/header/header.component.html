@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container px-3">
-        <a class="navbar-brand" href="index.html"><b>Fortis <span class="text-success">Hospital</span></b></a>
+        <a class="navbar-brand" href="index.html"><b>Fortis <span class="text-success">Hospitial</span></b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -10,6 +10,7 @@
                 <li *ngIf="doctorLogin" class="nav-item"><button class="nav-link btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Profile</button></li>
                 <li *ngIf="userLogin" class="nav-item"><a class="nav-link" href="contactus">Contact Us</a></li>
                 <li *ngIf="adddoctor" class="nav-item"><a class="nav-link" href="newdoctor">Add Doctor</a></li>
+                <li *ngIf="adddoctor" class="nav-item"><a class="nav-link" href="enquiry">Enquiry</a></li>
                 <li class="nav-item"><button class="btn btn-outline-success nav-link" (click)="logout()">logout</button></li>
             </ul>
         </div>
